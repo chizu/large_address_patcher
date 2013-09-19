@@ -4,7 +4,7 @@
 Useful for Wine apps that only work in 32-bit mode but need more memory. Some
 applications will break enabling this flag.
 
-Usage: ./large_address_patch.py something.exe"""
+Usage: ./large_address_patcher.py something.exe"""
 import sys
 import io
 import struct
@@ -19,7 +19,7 @@ with io.open(sys.argv[1], 'r+b') as exe:
     exe.seek(0x3C)
 
     # Verify PE header
-    pe_pos = struct.unpack('i', exe.read(4))[0]    
+    pe_pos = struct.unpack('i', exe.read(4))[0]
     exe.seek(pe_pos)
     assert 0x4550 == struct.unpack('i', exe.read(4))[0]
 
