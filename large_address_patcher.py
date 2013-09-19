@@ -4,9 +4,7 @@
 Useful for Wine apps that only work in 32-bit mode but need more memory. Some
 applications will break enabling this flag.
 
-Usage: ./large_address_patch.py something.exe
-
-Derived from http://stackoverflow.com/questions/9054469/how-to-check-if-exe-is-set-as-largeaddressaware and distributed under the Creative Commons CC-BY SA 3.0 license availabe at http://creativecommons.org/licenses/by-sa/3.0"""
+Usage: ./large_address_patch.py something.exe"""
 import sys
 import io
 import struct
